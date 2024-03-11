@@ -182,7 +182,7 @@ my sub is_deeply($$) {&is_deeply(@_)}
 # Tests
 
 if (1)
- {my $d = new;                                                                  #Tnew #Tgate
+ {my $d = new;                                                                  #Tnew #Tgate #Tsvg
      $d->gate(x=>1, y=>1, w=>1, h=>1, t=>"input",  l=>"i1");
      $d->gate(x=>1, y=>2, w=>1, h=>1, t=>"output", l=>"o1");
      $d->gate(x=>2, y=>1, w=>1, h=>2, t=>"or",     l=>"or");
