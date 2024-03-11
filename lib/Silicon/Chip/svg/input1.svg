@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg height="100%" viewBox="0 0 6 6" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<circle cx="1.5" cy="1.5" fill="green" font-size="0.25" opacity="0.75" r="0.333333333333333" stroke-width="1"/>
+<text alignment-baseline="middle" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="1.5" y="1.5">i1</text>
+<rect fill="orange" font-size="0.25" height="1" opacity="0.75" stroke-width="1" width="1" x="1" y="2"/>
+<text alignment-baseline="middle" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="1.5" y="2.5">o1</text>
+<path d="M 2 1 L 2.9 1.66666666666667 L 2.9 2.33333333333333 L 2 3 L 2.5 2 L 2 1" fill-opacity="0" font-size="0.25" opacity="0.75" stroke="darkBlue" stroke-width="0.05"/>
+<text alignment-baseline="middle" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="2.5" y="2">or</text>
+<path d="M 2 3 L 2.9 3.66666666666667 L 2.9 4.33333333333333 L 2 5 L 2.5 4 L 2 3" fill-opacity="0" font-size="0.25" opacity="0.75" stroke="Blue" stroke-width="0.05"/>
+<circle cx="2.9" cy="4" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
+<text alignment-baseline="middle" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="2.5" y="4">nor</text>
+<path d="M 3 1 L 3.9 1.66666666666667 L 3.9 2.33333333333333 L 3 3 L 3 1" fill-opacity="0" font-size="0.25" opacity="0.75" stroke="darkRed" stroke-width="0.05"/>
+<text alignment-baseline="middle" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="3.5" y="2">and</text>
+<path d="M 3 3 L 3.9 3.66666666666667 L 3.9 4.33333333333333 L 3 5 L 3 3" fill-opacity="0" font-size="0.25" opacity="0.75" stroke="Red" stroke-width="0.05"/>
+<circle cx="3.9" cy="4" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
+<text alignment-baseline="middle" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="3.5" y="4">nand</text>
+<path d="M 4 1 L 4.9 2 L 4 3 L 4.5 2 L 4 1 " fill-opacity="0" font-size="0.25" opacity="0.75" stroke="darkGreen" stroke-width="0.05"/>
+<text alignment-baseline="middle" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="4.5" y="2">xor</text>
+<path d="M 4 3 L 4.9 4 L 4 5 L 4.5 4 L 4 3 " fill-opacity="0" font-size="0.25" opacity="0.75" stroke="Green" stroke-width="0.05"/>
+<circle cx="4.9" cy="4" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
+<text alignment-baseline="middle" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="4.5" y="4">nxor</text>
+<text dominant-baseline="hanging" fill="Navy" fill-opacity="1" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="start" x="1" y="3">1</text>
+<rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke="Navy" stroke-opacity="1" stroke-width="0.025" width="1" x="1" y="3"/>
+<text alignment-baseline="middle" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="1.5" y="3.5">one</text>
+<text dominant-baseline="hanging" fill="Black" fill-opacity="1" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="start" x="1" y="4">0</text>
+<rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke="Black" stroke-opacity="1" stroke-width="0.025" width="1" x="1" y="4"/>
+<text alignment-baseline="middle" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="1.5" y="4.5">zero</text>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="0" y1="0" y2="6"/>
+<text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="0" y="0">0</text>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="1" x2="1" y1="0" y2="6"/>
+<text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="1" y="0">1</text>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="2" x2="2" y1="0" y2="6"/>
+<text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="2" y="0">2</text>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="3" x2="3" y1="0" y2="6"/>
+<text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="3" y="0">3</text>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="4" x2="4" y1="0" y2="6"/>
+<text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="4" y="0">4</text>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="5" x2="5" y1="0" y2="6"/>
+<text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="5" y="0">5</text>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="6" x2="6" y1="0" y2="6"/>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="6" y1="0" y2="0"/>
+<text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="0" y="0">0</text>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="6" y1="1" y2="1"/>
+<text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="0" y="1">1</text>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="6" y1="2" y2="2"/>
+<text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="0" y="2">2</text>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="6" y1="3" y2="3"/>
+<text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="0" y="3">3</text>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="6" y1="4" y2="4"/>
+<text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="0" y="4">4</text>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="6" y1="5" y2="5"/>
+<text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="0" y="5">5</text>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="6" y1="6" y2="6"/>
+</svg>
