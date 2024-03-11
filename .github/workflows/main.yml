@@ -1,4 +1,4 @@
-# Test 2024-03-11 at 01:08:14
+# Test 2024-03-11 at 01:14:30
 
 name: Test
 
@@ -25,18 +25,8 @@ jobs:
         repository: philiprbrenan/SvgSimple
         path: svg
 
-    - name: Install Tree
-      run:
-        sudo apt install tree
-
-    - name: Tree
-      run:
-        tree
-
     - name: Cpan
       run:  sudo cpan install -T Data::Dump
-    - name: Ubuntu update
-      run:  sudo apt update
 
     - name: Test Silicon Layout
       run:
