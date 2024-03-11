@@ -198,5 +198,6 @@ if (1)
 
 #latest:;
 
+ok  1;
 &done_testing;
 finish: 1
