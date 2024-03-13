@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg height="100%" viewBox="0 0 12.05 6" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg height="100%" viewBox="0 0 15.05 6" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
-<rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke-opacity="0" stroke-width="1" width="1" x="1" y="1"/>
+<rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="1" y="1"/>
 <circle cx="2" cy="1.5" fill="green" font-size="0.25" opacity="0.75" r="0.333333333333333" stroke-width="1"/>
-<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="1.5" y="1.5">i1</text>
-<rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke-opacity="0" stroke-width="1" width="1" x="1" y="2"/>
+<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="2" y="1.5">i1</text>
+<rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="1" y="2"/>
 <rect fill="orange" font-size="0.25" height="1" opacity="0.75" stroke-width="1" width="1" x="1.5" y="2"/>
-<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="1.5" y="2.5">o1</text>
-<rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="2" y="1"/>
-<path d="M 2 1 L 3.9 1.66666666666667 L 3.9 2.33333333333333 L 2 3 L 2.5 2 Z" fill="darkBlue" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="darkBlue" stroke-width="0.05"/>
-<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="3" y="2">or</text>
-<rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="2" y="3"/>
-<path d="M 2 3 L 3.9 3.66666666666667 L 3.9 4.33333333333333 L 2 5 L 2.5 4 Z" fill="Blue" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="Blue" stroke-width="0.05"/>
-<circle cx="3.9" cy="4" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
-<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="3" y="4">nor</text>
-<rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="4" y="1"/>
-<path d="M 4 1 L 5.9 1.66666666666667 L 5.9 2.33333333333333 L 4 3 Z" fill="darkRed" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="darkRed" stroke-width="0.05"/>
-<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="5" y="2">and</text>
-<rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="4" y="3"/>
-<path d="M 4 3 L 5.9 3.66666666666667 L 5.9 4.33333333333333 L 4 5 Z" fill="Red" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="Red" stroke-width="0.05"/>
-<circle cx="5.9" cy="4" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
-<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="5" y="4">nand</text>
-<rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="6" y="1"/>
-<path d="M 6 1 L 7.9 2 L 6 3 L 6.5 2 Z " fill="darkGreen" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="darkGreen" stroke-width="0.05"/>
-<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="7" y="2">xor</text>
-<rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="6" y="3"/>
-<path d="M 6 3 L 7.9 4 L 6 5 L 6.5 4 Z " fill="seaGreen" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="seaGreen" stroke-width="0.05"/>
-<circle cx="7.9" cy="4" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
-<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="7" y="4">nxor</text>
-<rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="8" y="1"/>
-<path d="M 8 1 L 9 2 L 8 3 L 9.9 3 L9.9 1 Z " fill="teal" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="teal" stroke-width="0.05"/>
-<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="9" y="2">lt</text>
-<rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="8" y="3"/>
-<path d="M 8 3 L 9 4 L 8 5 L 9.9 5 L9.9 3 Z " fill="turquoise" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="turquoise" stroke-width="0.05"/>
-<circle cx="9.9" cy="4" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
-<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="9" y="4">nlt</text>
-<rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="10" y="1"/>
-<path d="M 10 1 L 11.9 1 L 11 2 L 11.9 3 L10 3 Z " fill="orangered" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="orangered" stroke-width="0.05"/>
-<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="11" y="2">gt</text>
-<rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="10" y="3"/>
-<path d="M 10 3 L 11.9 3 L 11 4 L 11.9 5 L10 5 Z " fill="orange" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="orange" stroke-width="0.05"/>
-<circle cx="11.9" cy="4" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
-<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="11" y="4">ngt</text>
-<rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke-opacity="0" stroke-width="1" width="1" x="1" y="3"/>
-<text dominant-baseline="hanging" fill="Navy" fill-opacity="1" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="start" x="1" y="3">1</text>
-<rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke="Navy" stroke-opacity="1" stroke-width="0.025" width="1" x="1" y="3"/>
-<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="1.5" y="3.5">one</text>
-<rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke-opacity="0" stroke-width="1" width="1" x="1" y="4"/>
-<text dominant-baseline="hanging" fill="Black" fill-opacity="1" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="start" x="1" y="4">0</text>
-<rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke="Black" stroke-opacity="1" stroke-width="0.025" width="1" x="1" y="4"/>
-<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="1.5" y="4.5">zero</text>
-<rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke-opacity="0" stroke-width="1" width="1" x="1" y="5"/>
-<path d="M 1 5 L 1.9 5.5 L 1 6 Z" fill="chocolate" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="chocolate" stroke-width="0.05"/>
-<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="1.5" y="5.5">cont</text>
-<rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke-opacity="0" stroke-width="1" width="1" x="2" y="5"/>
-<path d="M 2 5 L 2.9 5.5 L 2 6 Z" fill="red" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="red" stroke-width="0.05"/>
-<circle cx="2.9" cy="5.5" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
-<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="2.5" y="5.5">not</text>
+<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="2" y="2.5">o1</text>
+<rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="3" y="1"/>
+<path d="M 3 1 L 4.9 1.66666666666667 L 4.9 2.33333333333333 L 3 3 L 3.5 2 Z" fill="darkBlue" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="darkBlue" stroke-width="0.05"/>
+<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="4" y="2">or</text>
+<rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="3" y="3"/>
+<path d="M 3 3 L 4.9 3.66666666666667 L 4.9 4.33333333333333 L 3 5 L 3.5 4 Z" fill="Blue" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="Blue" stroke-width="0.05"/>
+<circle cx="4.9" cy="4" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
+<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="4" y="4">nor</text>
+<rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="5" y="1"/>
+<path d="M 5 1 L 6.9 1.66666666666667 L 6.9 2.33333333333333 L 5 3 Z" fill="darkRed" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="darkRed" stroke-width="0.05"/>
+<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="6" y="2">and</text>
+<rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="5" y="3"/>
+<path d="M 5 3 L 6.9 3.66666666666667 L 6.9 4.33333333333333 L 5 5 Z" fill="Red" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="Red" stroke-width="0.05"/>
+<circle cx="6.9" cy="4" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
+<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="6" y="4">nand</text>
+<rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="7" y="1"/>
+<path d="M 7 1 L 8.9 2 L 7 3 L 7.5 2 Z " fill="darkGreen" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="darkGreen" stroke-width="0.05"/>
+<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="8" y="2">xor</text>
+<rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="7" y="3"/>
+<path d="M 7 3 L 8.9 4 L 7 5 L 7.5 4 Z " fill="seaGreen" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="seaGreen" stroke-width="0.05"/>
+<circle cx="8.9" cy="4" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
+<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="8" y="4">nxor</text>
+<rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="9" y="1"/>
+<path d="M 9 1 L 10 2 L 9 3 L 10.9 3 L10.9 1 Z " fill="teal" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="teal" stroke-width="0.05"/>
+<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="10" y="2">lt</text>
+<rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="9" y="3"/>
+<path d="M 9 3 L 10 4 L 9 5 L 10.9 5 L10.9 3 Z " fill="turquoise" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="turquoise" stroke-width="0.05"/>
+<circle cx="10.9" cy="4" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
+<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="10" y="4">nlt</text>
+<rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="11" y="1"/>
+<path d="M 11 1 L 12.9 1 L 12 2 L 12.9 3 L11 3 Z " fill="orangered" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="orangered" stroke-width="0.05"/>
+<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="12" y="2">gt</text>
+<rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="11" y="3"/>
+<path d="M 11 3 L 12.9 3 L 12 4 L 12.9 5 L11 5 Z " fill="orange" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="orange" stroke-width="0.05"/>
+<circle cx="12.9" cy="4" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
+<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="12" y="4">ngt</text>
+<rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="13" y="1"/>
+<path d="M 13 1 L 14.9 1.5 L 13 2 Z" fill="chocolate" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="chocolate" stroke-width="0.05"/>
+<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="14" y="1.5">cont</text>
+<rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="13" y="2"/>
+<path d="M 13 2 L 14.9 2.5 L 13 3 Z" fill="red" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="red" stroke-width="0.05"/>
+<circle cx="14.9" cy="2.5" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
+<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="14" y="2.5">not</text>
+<rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="13" y="3"/>
+<text dominant-baseline="hanging" fill="Navy" fill-opacity="1" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="start" x="13.5" y="3">1</text>
+<rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke="Navy" stroke-opacity="1" stroke-width="0.025" width="1" x="13.5" y="3"/>
+<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="14" y="3.5">one</text>
+<rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="13" y="4"/>
+<text dominant-baseline="hanging" fill="Black" fill-opacity="1" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="start" x="13.5" y="4">0</text>
+<rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke="Black" stroke-opacity="1" stroke-width="0.025" width="1" x="13.5" y="4"/>
+<text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="14" y="4.5">zero</text>
 <line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="0" y1="0" y2="6"/>
 <text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="0" y="0">0</text>
 <line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="1" x2="1" y1="0" y2="6"/>
@@ -83,17 +83,23 @@
 <line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="11" x2="11" y1="0" y2="6"/>
 <text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="11" y="0">11</text>
 <line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="12" x2="12" y1="0" y2="6"/>
-<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="12.05" y1="0" y2="0"/>
+<text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="12" y="0">12</text>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="13" x2="13" y1="0" y2="6"/>
+<text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="13" y="0">13</text>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="14" x2="14" y1="0" y2="6"/>
+<text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="14" y="0">14</text>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="15" x2="15" y1="0" y2="6"/>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="15.05" y1="0" y2="0"/>
 <text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="0" y="0">0</text>
-<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="12.05" y1="1" y2="1"/>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="15.05" y1="1" y2="1"/>
 <text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="0" y="1">1</text>
-<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="12.05" y1="2" y2="2"/>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="15.05" y1="2" y2="2"/>
 <text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="0" y="2">2</text>
-<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="12.05" y1="3" y2="3"/>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="15.05" y1="3" y2="3"/>
 <text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="0" y="3">3</text>
-<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="12.05" y1="4" y2="4"/>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="15.05" y1="4" y2="4"/>
 <text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="0" y="4">4</text>
-<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="12.05" y1="5" y2="5"/>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="15.05" y1="5" y2="5"/>
 <text dominant-baseline="hanging" fill="black" font-size="0.25" opacity="1" stroke="black" stroke-width="0.015625" text-anchor="start" x="0" y="5">5</text>
-<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="12.05" y1="6" y2="6"/>
+<line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="15.05" y1="6" y2="6"/>
 </svg>
