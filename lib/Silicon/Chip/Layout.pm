@@ -67,11 +67,15 @@ sub svg($%)                                                                     
   my $color     =                                                               # Colors of gates
    {q(and)      => "darkRed",
     q(continue) => "chocolate",
+    q(gt)       => "orangered",
     q(input)    => "green",
+    q(lt)       => "teal",
     q(nand)     => "Red",
+    q(ngt)      => "orange",
+    q(nlt)      => "turquoise",
     q(nor)      => "Blue",
     q(not)      => "red",
-    q(nxor)     => "Green",
+    q(nxor)     => "seaGreen",
     q(one)      => "Navy",
     q(or)       => "darkBlue",
     q(output)   => "orange",
@@ -84,13 +88,13 @@ sub svg($%)                                                                     
   for my $g($D->gates->@*)                                                      # Each gate
    {my ($x, $y, $w, $h, $t, $l) = @$g{qw(x y w h t l)};
     my $X  = $x+$w-1/10; my $xx = $x+$w/2; my $x14 = $x + $w/4;
-    my $y1 = $y+$h/3; my $y2 = $y+$h/2; my $y3 = $y+2*$h/3;  my $Y = $y+$h;
+    my $y1 = $y+$h/3; my $yy = $y+$h/2; my $y3 = $y+2*$h/3;  my $Y = $y+$h;
     my $c  = $$color{$t};
     defined($c) or confess "No color for $t";
 
     my sub Not()
      {if ($t =~ m(\An))
-       {$svg->circle(cx=>$X, cy=>$y2, r=>1/10, fill_opacity=>0, stroke_width=>1/20, stroke=>"gold");
+       {$svg->circle(cx=>$X, cy=>$yy, r=>1/10, fill_opacity=>0, stroke_width=>1/20, stroke=>"gold");
        }
      }
 
@@ -103,19 +107,27 @@ sub svg($%)                                                                     
      {$svg->rect(x=>$x+1/2,   y=>$y, width=>1, height =>1, fill=>$c);
      }
     elsif ($t eq "not" or $t eq "continue")
-     {$svg->path(d=>"M $x $y L $X $y2 L $x $Y L $x $y ", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
+     {$svg->path(d=>"M $x $y L $X $yy L $x $Y Z", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
       Not();
      }
-    elsif ($t eq "or" or $t eq "nor")
-     {$svg->path(d=>"M $x $y L $X $y1 L $X $y3 L $x $Y L $x14 $y2 L $x $y", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
+    elsif ($t =~ m(\An?or\Z))
+     {$svg->path(d=>"M $x $y L $X $y1 L $X $y3 L $x $Y L $x14 $yy Z", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
       Not();
      }
-    elsif ($t eq "and" or $t eq "nand")
-     {$svg->path(d=>"M $x $y L $X $y1 L $X $y3 L $x $Y L $x $y", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
+    elsif ($t =~ m(\An?and\Z))
+     {$svg->path(d=>"M $x $y L $X $y1 L $X $y3 L $x $Y Z", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
       Not();
      }
-    elsif ($t eq "xor" or $t eq "nxor")
-     {$svg->path(d=>"M $x $y L $X $y2 L $x $Y L $x14 $y2 L $x $y ", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
+    elsif ($t =~ m(\An?xor\Z))
+     {$svg->path(d=>"M $x $y L $X $yy L $x $Y L $x14 $yy Z ", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
+      Not();
+     }
+    elsif ($t =~ m(\An?gt\Z))
+     {$svg->path(d=>"M $x $y L $X $y L $xx $yy L $X $Y L$x $Y Z ", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
+      Not();
+     }
+    elsif ($t =~ m(\An?lt\Z))
+     {$svg->path(d=>"M $x $y L $xx $yy L $x $Y L $X $Y L$X $y Z ", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
       Not();
      }
     elsif ($t eq "one" or $t eq "zero")
@@ -186,18 +198,22 @@ my sub is_deeply($$) {&is_deeply(@_)}
 
 if (1)
  {my $d = new;                                                                  #Tnew #Tgate #Tsvg
-     $d->gate(x=>1, y=>1, w=>1, h=>1, t=>"input",    l=>"i1");
-     $d->gate(x=>1, y=>2, w=>1, h=>1, t=>"output",   l=>"o1");
-     $d->gate(x=>2, y=>1, w=>2, h=>2, t=>"or",       l=>"or");
-     $d->gate(x=>2, y=>3, w=>2, h=>2, t=>"nor",      l=>"nor");
-     $d->gate(x=>4, y=>1, w=>2, h=>2, t=>"and",      l=>"and");
-     $d->gate(x=>4, y=>3, w=>2, h=>2, t=>"nand",     l=>"nand");
-     $d->gate(x=>6, y=>1, w=>2, h=>2, t=>"xor",      l=>"xor");
-     $d->gate(x=>6, y=>3, w=>2, h=>2, t=>"nxor",     l=>"nxor");
-     $d->gate(x=>1, y=>3, w=>1, h=>1, t=>"one",      l=>"one");
-     $d->gate(x=>1, y=>4, w=>1, h=>1, t=>"zero",     l=>"zero");
-     $d->gate(x=>1, y=>5, w=>1, h=>1, t=>"continue", l=>"cont");
-     $d->gate(x=>2, y=>5, w=>1, h=>1, t=>"not",      l=>"not");
+     $d->gate(x=> 1, y=>1, w=>1, h=>1, t=>"input",    l=>"i1");
+     $d->gate(x=> 1, y=>2, w=>1, h=>1, t=>"output",   l=>"o1");
+     $d->gate(x=> 2, y=>1, w=>2, h=>2, t=>"or",       l=>"or");
+     $d->gate(x=> 2, y=>3, w=>2, h=>2, t=>"nor",      l=>"nor");
+     $d->gate(x=> 4, y=>1, w=>2, h=>2, t=>"and",      l=>"and");
+     $d->gate(x=> 4, y=>3, w=>2, h=>2, t=>"nand",     l=>"nand");
+     $d->gate(x=> 6, y=>1, w=>2, h=>2, t=>"xor",      l=>"xor");
+     $d->gate(x=> 6, y=>3, w=>2, h=>2, t=>"nxor",     l=>"nxor");
+     $d->gate(x=> 8, y=>1, w=>2, h=>2, t=>"lt",       l=>"lt");
+     $d->gate(x=> 8, y=>3, w=>2, h=>2, t=>"nlt",      l=>"nlt");
+     $d->gate(x=>10, y=>1, w=>2, h=>2, t=>"gt",       l=>"gt");
+     $d->gate(x=>10, y=>3, w=>2, h=>2, t=>"ngt",      l=>"ngt");
+     $d->gate(x=> 1, y=>3, w=>1, h=>1, t=>"one",      l=>"one");
+     $d->gate(x=> 1, y=>4, w=>1, h=>1, t=>"zero",     l=>"zero");
+     $d->gate(x=> 1, y=>5, w=>1, h=>1, t=>"continue", l=>"cont");
+     $d->gate(x=> 2, y=>5, w=>1, h=>1, t=>"not",      l=>"not");
      $d->svg(file=>"input1", height=>6);
  }
 
