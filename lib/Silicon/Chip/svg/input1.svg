@@ -9,38 +9,38 @@
 <rect fill="orange" font-size="0.25" height="1" opacity="0.75" stroke-width="1" width="1" x="1.5" y="2"/>
 <text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="1.5" y="2.5">o1</text>
 <rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="2" y="1"/>
-<path d="M 2 1 L 3.9 1.66666666666667 L 3.9 2.33333333333333 L 2 3 L 2.5 2 Z" fill-opacity="0" font-size="0.25" opacity="0.75" stroke="darkBlue" stroke-width="0.05"/>
+<path d="M 2 1 L 3.9 1.66666666666667 L 3.9 2.33333333333333 L 2 3 L 2.5 2 Z" fill="darkBlue" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="darkBlue" stroke-width="0.05"/>
 <text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="3" y="2">or</text>
 <rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="2" y="3"/>
-<path d="M 2 3 L 3.9 3.66666666666667 L 3.9 4.33333333333333 L 2 5 L 2.5 4 Z" fill-opacity="0" font-size="0.25" opacity="0.75" stroke="Blue" stroke-width="0.05"/>
+<path d="M 2 3 L 3.9 3.66666666666667 L 3.9 4.33333333333333 L 2 5 L 2.5 4 Z" fill="Blue" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="Blue" stroke-width="0.05"/>
 <circle cx="3.9" cy="4" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
 <text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="3" y="4">nor</text>
 <rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="4" y="1"/>
-<path d="M 4 1 L 5.9 1.66666666666667 L 5.9 2.33333333333333 L 4 3 Z" fill-opacity="0" font-size="0.25" opacity="0.75" stroke="darkRed" stroke-width="0.05"/>
+<path d="M 4 1 L 5.9 1.66666666666667 L 5.9 2.33333333333333 L 4 3 Z" fill="darkRed" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="darkRed" stroke-width="0.05"/>
 <text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="5" y="2">and</text>
 <rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="4" y="3"/>
-<path d="M 4 3 L 5.9 3.66666666666667 L 5.9 4.33333333333333 L 4 5 Z" fill-opacity="0" font-size="0.25" opacity="0.75" stroke="Red" stroke-width="0.05"/>
+<path d="M 4 3 L 5.9 3.66666666666667 L 5.9 4.33333333333333 L 4 5 Z" fill="Red" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="Red" stroke-width="0.05"/>
 <circle cx="5.9" cy="4" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
 <text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="5" y="4">nand</text>
 <rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="6" y="1"/>
-<path d="M 6 1 L 7.9 2 L 6 3 L 6.5 2 Z " fill-opacity="0" font-size="0.25" opacity="0.75" stroke="darkGreen" stroke-width="0.05"/>
+<path d="M 6 1 L 7.9 2 L 6 3 L 6.5 2 Z " fill="darkGreen" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="darkGreen" stroke-width="0.05"/>
 <text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="7" y="2">xor</text>
 <rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="6" y="3"/>
-<path d="M 6 3 L 7.9 4 L 6 5 L 6.5 4 Z " fill-opacity="0" font-size="0.25" opacity="0.75" stroke="seaGreen" stroke-width="0.05"/>
+<path d="M 6 3 L 7.9 4 L 6 5 L 6.5 4 Z " fill="seaGreen" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="seaGreen" stroke-width="0.05"/>
 <circle cx="7.9" cy="4" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
 <text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="7" y="4">nxor</text>
 <rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="8" y="1"/>
-<path d="M 8 1 L 9 2 L 8 3 L 9.9 3 L9.9 1 Z " fill-opacity="0" font-size="0.25" opacity="0.75" stroke="teal" stroke-width="0.05"/>
+<path d="M 8 1 L 9 2 L 8 3 L 9.9 3 L9.9 1 Z " fill="teal" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="teal" stroke-width="0.05"/>
 <text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="9" y="2">lt</text>
 <rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="8" y="3"/>
-<path d="M 8 3 L 9 4 L 8 5 L 9.9 5 L9.9 3 Z " fill-opacity="0" font-size="0.25" opacity="0.75" stroke="turquoise" stroke-width="0.05"/>
+<path d="M 8 3 L 9 4 L 8 5 L 9.9 5 L9.9 3 Z " fill="turquoise" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="turquoise" stroke-width="0.05"/>
 <circle cx="9.9" cy="4" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
 <text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="9" y="4">nlt</text>
 <rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="10" y="1"/>
-<path d="M 10 1 L 11.9 1 L 11 2 L 11.9 3 L10 3 Z " fill-opacity="0" font-size="0.25" opacity="0.75" stroke="orangered" stroke-width="0.05"/>
+<path d="M 10 1 L 11.9 1 L 11 2 L 11.9 3 L10 3 Z " fill="orangered" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="orangered" stroke-width="0.05"/>
 <text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="11" y="2">gt</text>
 <rect fill-opacity="0" font-size="0.25" height="2" opacity="0.75" stroke-opacity="0" stroke-width="1" width="2" x="10" y="3"/>
-<path d="M 10 3 L 11.9 3 L 11 4 L 11.9 5 L10 5 Z " fill-opacity="0" font-size="0.25" opacity="0.75" stroke="orange" stroke-width="0.05"/>
+<path d="M 10 3 L 11.9 3 L 11 4 L 11.9 5 L10 5 Z " fill="orange" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="orange" stroke-width="0.05"/>
 <circle cx="11.9" cy="4" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
 <text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="11" y="4">ngt</text>
 <rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke-opacity="0" stroke-width="1" width="1" x="1" y="3"/>
@@ -52,10 +52,10 @@
 <rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke="Black" stroke-opacity="1" stroke-width="0.025" width="1" x="1" y="4"/>
 <text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="1.5" y="4.5">zero</text>
 <rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke-opacity="0" stroke-width="1" width="1" x="1" y="5"/>
-<path d="M 1 5 L 1.9 5.5 L 1 6 Z" fill-opacity="0" font-size="0.25" opacity="0.75" stroke="chocolate" stroke-width="0.05"/>
+<path d="M 1 5 L 1.9 5.5 L 1 6 Z" fill="chocolate" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="chocolate" stroke-width="0.05"/>
 <text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="1.5" y="5.5">cont</text>
 <rect fill-opacity="0" font-size="0.25" height="1" opacity="0.75" stroke-opacity="0" stroke-width="1" width="1" x="2" y="5"/>
-<path d="M 2 5 L 2.9 5.5 L 2 6 Z" fill-opacity="0" font-size="0.25" opacity="0.75" stroke="red" stroke-width="0.05"/>
+<path d="M 2 5 L 2.9 5.5 L 2 6 Z" fill="red" fill-opacity="0.1" font-size="0.25" opacity="0.75" stroke="red" stroke-width="0.05"/>
 <circle cx="2.9" cy="5.5" fill-opacity="0" font-size="0.25" opacity="0.75" r="0.1" stroke="gold" stroke-width="0.05"/>
 <text dominant-baseline="central" font-size="0.25" opacity="0.75" stroke-width="1" text-anchor="middle" x="2.5" y="5.5">not</text>
 <line dominant-baseline="hanging" font-size="0.25" opacity="0.2" stroke="black" stroke-width="0.015625" text-anchor="start" x1="0" x2="0" y1="0" y2="6"/>
