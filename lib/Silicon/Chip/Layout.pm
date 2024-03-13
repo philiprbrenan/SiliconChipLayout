@@ -34,10 +34,10 @@ sub gate($%)                                                                    
   my ($x, $y, $w, $h, $t, $l) = @options{qw(x y w h t l)};
   defined($x) or confess "x";
   defined($y) or confess "y";
-  defined($w) or confess "width";
-  defined($h) or confess "height";
-  defined($t) or confess "type";
-  defined($l) or confess "label";
+  defined($w) or confess "w";
+  defined($h) or confess "h";
+  defined($t) or confess "t";
+  defined($l) or confess "l";
 
   my $g = genHash(__PACKAGE__,                                                  # Gate
     x => $x,                                                                    # X upper left corner of gate
@@ -64,25 +64,26 @@ sub svg($%)                                                                     
     opacity      => 3/4,
    });
 
-  my $color   =                                                                 # Colors of gates
-   {q(input)  => "green",
-    q(output) => "orange",
-    q(not)    => "red",
-    q(and)    => "darkRed",
-    q(nand)   => "Red",
-    q(or)     => "darkBlue",
-    q(nor)    => "Blue",
-    q(xor)    => "darkGreen",
-    q(nxor)   => "Green",
-    q(one)    => "Navy",
-    q(zero)   => "Black",
+  my $color     =                                                               # Colors of gates
+   {q(and)      => "darkRed",
+    q(continue) => "chocolate",
+    q(input)    => "green",
+    q(nand)     => "Red",
+    q(nor)      => "Blue",
+    q(not)      => "red",
+    q(nxor)     => "Green",
+    q(one)      => "Navy",
+    q(or)       => "darkBlue",
+    q(output)   => "orange",
+    q(xor)      => "darkGreen",
+    q(zero)     => "Black",
    };
 
   my $svg = Svg::Simple::new(@defaults, %options, grid=>debugMask ? 1 : 0);     # Draw each wire via Svg. Grid set to 1 produces a grid that can be helpful debugging layout problems
 
   for my $g($D->gates->@*)                                                      # Each gate
    {my ($x, $y, $w, $h, $t, $l) = @$g{qw(x y w h t l)};
-    my $X  = $x+$w-1/10; my $xx = $x+$w/2;
+    my $X  = $x+$w-1/10; my $xx = $x+$w/2; my $x14 = $x + $w/4;
     my $y1 = $y+$h/3; my $y2 = $y+$h/2; my $y3 = $y+2*$h/3;  my $Y = $y+$h;
     my $c  = $$color{$t};
     defined($c) or confess "No color for $t";
@@ -93,18 +94,20 @@ sub svg($%)                                                                     
        }
      }
 
+    $svg->rect(x=>$x, y=>$y, width=>$w, height=>$h, fill_opacity=>0, stroke_opacity=>0); # Warps the gate with an invisible rectangle to force the svg image out to the right size.  This line can be dropped when Svg::Simple takes paths into account when calculating the size of a drawing
+
     if    ($t eq "input")
-     {$svg->circle(cx=>$x+1/2, cy=>$y+1/2, r =>1/3,      fill=>$c);
+     {$svg->circle(cx=>$x+1, cy=>$y+1/2, r =>1/3,      fill=>$c);
      }
     elsif ($t eq "output")
-     {$svg->rect(x=>$x,     y=>$y, width=>1, height =>1, fill=>$c);
+     {$svg->rect(x=>$x+1/2,   y=>$y, width=>1, height =>1, fill=>$c);
      }
     elsif ($t eq "not" or $t eq "continue")
      {$svg->path(d=>"M $x $y L $X $y2 L $x $Y L $x $y ", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
       Not();
      }
     elsif ($t eq "or" or $t eq "nor")
-     {$svg->path(d=>"M $x $y L $X $y1 L $X $y3 L $x $Y L $xx $y2 L $x $y", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
+     {$svg->path(d=>"M $x $y L $X $y1 L $X $y3 L $x $Y L $x14 $y2 L $x $y", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
       Not();
      }
     elsif ($t eq "and" or $t eq "nand")
@@ -112,7 +115,7 @@ sub svg($%)                                                                     
       Not();
      }
     elsif ($t eq "xor" or $t eq "nxor")
-     {$svg->path(d=>"M $x $y L $X $y2 L $x $Y L $xx $y2 L $x $y ", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
+     {$svg->path(d=>"M $x $y L $X $y2 L $x $Y L $x14 $y2 L $x $y ", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
       Not();
      }
     elsif ($t eq "one" or $t eq "zero")
@@ -120,7 +123,7 @@ sub svg($%)                                                                     
       $svg->rect(x=>$x, y=>$y, width=>1, height=>1, fill_opacity=>0, stroke=>$c, stroke_opacity=>1, stroke_width=>1/40);
      }
     $svg->text  (x=>$x+$w/2, y=>$y+$h/2,
-      text_anchor=>"middle", alignment_baseline=>"middle", cdata=>$l);
+      text_anchor=>"middle", dominant_baseline=>"central", cdata=>$l);
    }
 
   my $t = $svg->print(%options);                                                # Text of svg
@@ -183,17 +186,19 @@ my sub is_deeply($$) {&is_deeply(@_)}
 
 if (1)
  {my $d = new;                                                                  #Tnew #Tgate #Tsvg
-     $d->gate(x=>1, y=>1, w=>1, h=>1, t=>"input",  l=>"i1");
-     $d->gate(x=>1, y=>2, w=>1, h=>1, t=>"output", l=>"o1");
-     $d->gate(x=>2, y=>1, w=>1, h=>2, t=>"or",     l=>"or");
-     $d->gate(x=>2, y=>3, w=>1, h=>2, t=>"nor",    l=>"nor");
-     $d->gate(x=>3, y=>1, w=>1, h=>2, t=>"and",    l=>"and");
-     $d->gate(x=>3, y=>3, w=>1, h=>2, t=>"nand",   l=>"nand");
-     $d->gate(x=>4, y=>1, w=>1, h=>2, t=>"xor",    l=>"xor");
-     $d->gate(x=>4, y=>3, w=>1, h=>2, t=>"nxor",   l=>"nxor");
-     $d->gate(x=>1, y=>3, w=>1, h=>1, t=>"one",    l=>"one");
-     $d->gate(x=>1, y=>4, w=>1, h=>1, t=>"zero",   l=>"zero");
-     $d->svg(file=>"input1", width=>6, height=>6);
+     $d->gate(x=>1, y=>1, w=>1, h=>1, t=>"input",    l=>"i1");
+     $d->gate(x=>1, y=>2, w=>1, h=>1, t=>"output",   l=>"o1");
+     $d->gate(x=>2, y=>1, w=>2, h=>2, t=>"or",       l=>"or");
+     $d->gate(x=>2, y=>3, w=>2, h=>2, t=>"nor",      l=>"nor");
+     $d->gate(x=>4, y=>1, w=>2, h=>2, t=>"and",      l=>"and");
+     $d->gate(x=>4, y=>3, w=>2, h=>2, t=>"nand",     l=>"nand");
+     $d->gate(x=>6, y=>1, w=>2, h=>2, t=>"xor",      l=>"xor");
+     $d->gate(x=>6, y=>3, w=>2, h=>2, t=>"nxor",     l=>"nxor");
+     $d->gate(x=>1, y=>3, w=>1, h=>1, t=>"one",      l=>"one");
+     $d->gate(x=>1, y=>4, w=>1, h=>1, t=>"zero",     l=>"zero");
+     $d->gate(x=>1, y=>5, w=>1, h=>1, t=>"continue", l=>"cont");
+     $d->gate(x=>2, y=>5, w=>1, h=>1, t=>"not",      l=>"not");
+     $d->svg(file=>"input1", height=>6);
  }
 
 #latest:;
