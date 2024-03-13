@@ -176,7 +176,7 @@ clearFolder(q(svg), 99);                                                        
 my $start = time;
 eval "use Test::More";
 eval "Test::More->builder->output('/dev/null')" if -e q(/home/phil/);
-eval {goto latest};
+eval {goto latest} if -e q(/home/phil/);
 
 my sub  ok($)        {!$_[0] and confess; &ok( $_[0])}
 my sub nok($)        {&ok(!$_[0])}
