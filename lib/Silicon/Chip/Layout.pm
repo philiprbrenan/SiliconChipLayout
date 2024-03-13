@@ -131,8 +131,8 @@ sub svg($%)                                                                     
       Not();
      }
     elsif ($t eq "one" or $t eq "zero")
-     {$svg->text(x=>$x, y=>$y, fill=>$c, fill_opacity=>1, text_anchor=>"start", dominant_baseline=>"hanging", cdata=>($t eq "one" ? "1" : "0"));
-      $svg->rect(x=>$x, y=>$y, width=>1, height=>1, fill_opacity=>0, stroke=>$c, stroke_opacity=>1, stroke_width=>1/40);
+     {$svg->text(x=>$x+1/2, y=>$y, fill=>$c, fill_opacity=>1, text_anchor=>"start", dominant_baseline=>"hanging", cdata=>($t eq "one" ? "1" : "0"));
+      $svg->rect(x=>$x+1/2, y=>$y, width=>1, height=>1, fill_opacity=>0, stroke=>$c, stroke_opacity=>1, stroke_width=>1/40);
      }
     $svg->text  (x=>$x+$w/2, y=>$y+$h/2,
       text_anchor=>"middle", dominant_baseline=>"central", cdata=>$l);
@@ -198,22 +198,22 @@ my sub is_deeply($$) {&is_deeply(@_)}
 
 if (1)
  {my $d = new;                                                                  #Tnew #Tgate #Tsvg
-     $d->gate(x=> 1, y=>1, w=>1, h=>1, t=>"input",    l=>"i1");
-     $d->gate(x=> 1, y=>2, w=>1, h=>1, t=>"output",   l=>"o1");
-     $d->gate(x=> 2, y=>1, w=>2, h=>2, t=>"or",       l=>"or");
-     $d->gate(x=> 2, y=>3, w=>2, h=>2, t=>"nor",      l=>"nor");
-     $d->gate(x=> 4, y=>1, w=>2, h=>2, t=>"and",      l=>"and");
-     $d->gate(x=> 4, y=>3, w=>2, h=>2, t=>"nand",     l=>"nand");
-     $d->gate(x=> 6, y=>1, w=>2, h=>2, t=>"xor",      l=>"xor");
-     $d->gate(x=> 6, y=>3, w=>2, h=>2, t=>"nxor",     l=>"nxor");
-     $d->gate(x=> 8, y=>1, w=>2, h=>2, t=>"lt",       l=>"lt");
-     $d->gate(x=> 8, y=>3, w=>2, h=>2, t=>"nlt",      l=>"nlt");
-     $d->gate(x=>10, y=>1, w=>2, h=>2, t=>"gt",       l=>"gt");
-     $d->gate(x=>10, y=>3, w=>2, h=>2, t=>"ngt",      l=>"ngt");
-     $d->gate(x=> 1, y=>3, w=>1, h=>1, t=>"one",      l=>"one");
-     $d->gate(x=> 1, y=>4, w=>1, h=>1, t=>"zero",     l=>"zero");
-     $d->gate(x=> 1, y=>5, w=>1, h=>1, t=>"continue", l=>"cont");
-     $d->gate(x=> 2, y=>5, w=>1, h=>1, t=>"not",      l=>"not");
+     $d->gate(x=> 1, y=>1, w=>2, h=>1, t=>"input",    l=>"i1");
+     $d->gate(x=> 1, y=>2, w=>2, h=>1, t=>"output",   l=>"o1");
+     $d->gate(x=> 3, y=>1, w=>2, h=>2, t=>"or",       l=>"or");
+     $d->gate(x=> 3, y=>3, w=>2, h=>2, t=>"nor",      l=>"nor");
+     $d->gate(x=> 5, y=>1, w=>2, h=>2, t=>"and",      l=>"and");
+     $d->gate(x=> 5, y=>3, w=>2, h=>2, t=>"nand",     l=>"nand");
+     $d->gate(x=> 7, y=>1, w=>2, h=>2, t=>"xor",      l=>"xor");
+     $d->gate(x=> 7, y=>3, w=>2, h=>2, t=>"nxor",     l=>"nxor");
+     $d->gate(x=> 9, y=>1, w=>2, h=>2, t=>"lt",       l=>"lt");
+     $d->gate(x=> 9, y=>3, w=>2, h=>2, t=>"nlt",      l=>"nlt");
+     $d->gate(x=>11, y=>1, w=>2, h=>2, t=>"gt",       l=>"gt");
+     $d->gate(x=>11, y=>3, w=>2, h=>2, t=>"ngt",      l=>"ngt");
+     $d->gate(x=>13, y=>1, w=>2, h=>1, t=>"continue", l=>"cont");
+     $d->gate(x=>13, y=>2, w=>2, h=>1, t=>"not",      l=>"not");
+     $d->gate(x=>13, y=>3, w=>2, h=>1, t=>"one",      l=>"one");
+     $d->gate(x=>13, y=>4, w=>2, h=>1, t=>"zero",     l=>"zero");
      $d->svg(file=>"input1", height=>6);
  }
 
