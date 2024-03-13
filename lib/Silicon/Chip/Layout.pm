@@ -107,27 +107,27 @@ sub svg($%)                                                                     
      {$svg->rect(x=>$x+1/2,   y=>$y, width=>1, height =>1, fill=>$c);
      }
     elsif ($t eq "not" or $t eq "continue")
-     {$svg->path(d=>"M $x $y L $X $yy L $x $Y Z", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
+     {$svg->path(d=>"M $x $y L $X $yy L $x $Y Z", stroke_width=>1/20, stroke=>$c, fill_opacity=>0.1, fill=>$c);
       Not();
      }
     elsif ($t =~ m(\An?or\Z))
-     {$svg->path(d=>"M $x $y L $X $y1 L $X $y3 L $x $Y L $x14 $yy Z", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
+     {$svg->path(d=>"M $x $y L $X $y1 L $X $y3 L $x $Y L $x14 $yy Z", stroke_width=>1/20, stroke=>$c, fill_opacity=>0.1, fill=>$c);
       Not();
      }
     elsif ($t =~ m(\An?and\Z))
-     {$svg->path(d=>"M $x $y L $X $y1 L $X $y3 L $x $Y Z", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
+     {$svg->path(d=>"M $x $y L $X $y1 L $X $y3 L $x $Y Z", stroke_width=>1/20, stroke=>$c, fill_opacity=>0.1, fill=>$c);
       Not();
      }
     elsif ($t =~ m(\An?xor\Z))
-     {$svg->path(d=>"M $x $y L $X $yy L $x $Y L $x14 $yy Z ", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
+     {$svg->path(d=>"M $x $y L $X $yy L $x $Y L $x14 $yy Z ", stroke_width=>1/20, stroke=>$c, fill_opacity=>0.1, fill=>$c);
       Not();
      }
     elsif ($t =~ m(\An?gt\Z))
-     {$svg->path(d=>"M $x $y L $X $y L $xx $yy L $X $Y L$x $Y Z ", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
+     {$svg->path(d=>"M $x $y L $X $y L $xx $yy L $X $Y L$x $Y Z ", stroke_width=>1/20, stroke=>$c, fill_opacity=>0.1, fill=>$c);
       Not();
      }
     elsif ($t =~ m(\An?lt\Z))
-     {$svg->path(d=>"M $x $y L $xx $yy L $x $Y L $X $Y L$X $y Z ", stroke_width=>1/20, stroke=>$c, fill_opacity=>0);
+     {$svg->path(d=>"M $x $y L $xx $yy L $x $Y L $X $Y L$X $y Z ", stroke_width=>1/20, stroke=>$c, fill_opacity=>0.1, fill=>$c);
       Not();
      }
     elsif ($t eq "one" or $t eq "zero")
