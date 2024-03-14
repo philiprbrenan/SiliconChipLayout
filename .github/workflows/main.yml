@@ -1,4 +1,4 @@
-# Test 2024-03-13 at 07:13:38
+# Test 2024-03-14 at 02:12:13
 
 name: Test
 
@@ -25,9 +25,14 @@ jobs:
         repository: philiprbrenan/SvgSimple
         path: svg
 
+    - uses: actions/checkout@v3
+      with:
+        repository: philiprbrenan/MathIntersectionCircleLine
+        path: micl
+
     - name: Cpan
       run:  sudo cpan install -T Data::Dump
 
     - name: Test Silicon Layout
       run:
-        perl -Idtt/lib -Isvg/lib  lib/Silicon/Chip/Layout.pm
+        perl -Idtt/lib -Isvg/lib  -Imicl/lib  lib/Silicon/Chip/Layout.pm
