@@ -1,4 +1,4 @@
-#!/usr/bin/perl -I/home/phil/perl/cpan/DataTableText/lib/ -I/home/phil/perl/cpan/SvgSimple/lib/
+#!/usr/bin/perl -I/home/phil/perl/cpan/DataTableText/lib/ -I/home/phil/perl/cpan/SvgSimple/lib/ -I/home/phil/perl/cpan/Math-Intersection-Circle-Line/lib
 #-------------------------------------------------------------------------------
 # Layout the gates of a silicon chip
 # Philip R Brenan at appaapps dot com, Appa Apps Ltd Inc., 2024
@@ -11,6 +11,7 @@ use strict;
 use Carp;
 use Data::Dump qw(dump);
 use Data::Table::Text qw(:all);
+use Math::Intersection::Circle::Line;
 use Svg::Simple;
 
 makeDieConfess;
@@ -59,9 +60,11 @@ sub svg($%)                                                                     
  {my ($D, %options) = @_;                                                       # Diagram, options
 
   my @defaults = (defaults=>                                                    # Default values
-   {stroke_width => 1,
-    font_size    => 1/4,
-    opacity      => 3/4,
+   {stroke_width      => 1,
+    font_size         => 1/4,
+    opacity           => 3/4,
+    text_anchor       => "middle",
+    dominant_baseline => "central",
    });
 
   my $color     =                                                               # Colors of gates
@@ -80,14 +83,14 @@ sub svg($%)                                                                     
     q(or)       => "darkBlue",
     q(output)   => "orange",
     q(xor)      => "darkGreen",
-    q(zero)     => "Black",
+    q(zero)     => "gray",
    };
 
   my $svg = Svg::Simple::new(@defaults, %options, grid=>debugMask ? 1 : 0);     # Draw each wire via Svg. Grid set to 1 produces a grid that can be helpful debugging layout problems
 
   for my $g($D->gates->@*)                                                      # Each gate
    {my ($x, $y, $w, $h, $t, $l) = @$g{qw(x y w h t l)};
-    my $X  = $x+$w-1/10; my $xx = $x+$w/2; my $x14 = $x + $w/4;
+    my $X  = $x+$w-1/10; my $xx = $x+$w/2; my $x14 = $x + $w/4; my $x18 = $x + $w/8;
     my $y1 = $y+$h/3; my $yy = $y+$h/2; my $y3 = $y+2*$h/3;  my $Y = $y+$h;
     my $c  = $$color{$t};
     defined($c) or confess "No color for $t";
@@ -98,10 +101,12 @@ sub svg($%)                                                                     
        }
      }
 
+    my $arc = $svg->arcPath(64, $xx, $y, $X, $yy, $xx, $Y);
+
     $svg->rect(x=>$x, y=>$y, width=>$w, height=>$h, fill_opacity=>0, stroke_opacity=>0); # Warps the gate with an invisible rectangle to force the svg image out to the right size.  This line can be dropped when Svg::Simple takes paths into account when calculating the size of a drawing
 
     if    ($t eq "input")
-     {$svg->circle(cx=>$x+1, cy=>$y+1/2, r =>1/3,      fill=>$c);
+     {$svg->circle(cx=>$x+1, cy=>$y+1/2, r =>1/3,          fill=>$c);
      }
     elsif ($t eq "output")
      {$svg->rect(x=>$x+1/2,   y=>$y, width=>1, height =>1, fill=>$c);
@@ -111,15 +116,16 @@ sub svg($%)                                                                     
       Not();
      }
     elsif ($t =~ m(\An?or\Z))
-     {$svg->path(d=>"M $x $y L $X $y1 L $X $y3 L $x $Y L $x14 $yy Z", stroke_width=>1/20, stroke=>$c, fill_opacity=>0.1, fill=>$c);
+     {$svg->path(d=>"M $x $y $arc L $x $Y  L $x14 $yy Z", stroke_width=>1/20, stroke=>$c, fill_opacity=>0.1, fill=>$c);
       Not();
      }
     elsif ($t =~ m(\An?and\Z))
-     {$svg->path(d=>"M $x $y L $X $y1 L $X $y3 L $x $Y Z", stroke_width=>1/20, stroke=>$c, fill_opacity=>0.1, fill=>$c);
+     {$svg->path(d=>"M $x $y $arc L $x $Y  L $x   $yy Z", stroke_width=>1/20, stroke=>$c, fill_opacity=>0.1, fill=>$c);
       Not();
      }
     elsif ($t =~ m(\An?xor\Z))
-     {$svg->path(d=>"M $x $y L $X $yy L $x $Y L $x14 $yy Z ", stroke_width=>1/20, stroke=>$c, fill_opacity=>0.1, fill=>$c);
+     {$svg->path(d=>"M $x $y $arc L $x $Y  L $x18 $yy Z", stroke_width=>1/20, stroke=>$c, fill_opacity=>0.1, fill=>$c);
+      $svg->path(d=>"M $x $y      L $x14 $yy L $x $Y",    stroke_width=>1/20, stroke=>$c, fill_opacity=>0.1, fill=>$c);
       Not();
      }
     elsif ($t =~ m(\An?gt\Z))
@@ -131,11 +137,10 @@ sub svg($%)                                                                     
       Not();
      }
     elsif ($t eq "one" or $t eq "zero")
-     {$svg->text(x=>$x+1/2, y=>$y, fill=>$c, fill_opacity=>1, text_anchor=>"start", dominant_baseline=>"hanging", cdata=>($t eq "one" ? "1" : "0"));
+     {$svg->text(x=>$x+1,   y=>$y+1/2, fill=>$c, fill_opacity=>1, font_size=>1, cdata=>($t eq "one" ? "1" : "0"));
       $svg->rect(x=>$x+1/2, y=>$y, width=>1, height=>1, fill_opacity=>0, stroke=>$c, stroke_opacity=>1, stroke_width=>1/40);
      }
-    $svg->text  (x=>$x+$w/2, y=>$y+$h/2,
-      text_anchor=>"middle", dominant_baseline=>"central", cdata=>$l);
+    $svg->text  (x=>$x+$w/2, y=>$y+$h/2, cdata=>$l);
    }
 
   my $t = $svg->print(%options);                                                # Text of svg
