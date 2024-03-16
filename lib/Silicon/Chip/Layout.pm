@@ -146,7 +146,7 @@ sub svg($%)                                                                     
   my $t = $svg->print(%options);                                                # Text of svg
 
   if (my $f = $options{file})                                                   # Optionally write to an svg file
-   {owf(fpe(q(svg), $f, q(svg)), $t)
+   {owf(fpe($f, q(svg)), $t)
    }
 
   $t
