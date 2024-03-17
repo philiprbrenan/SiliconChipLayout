@@ -182,11 +182,151 @@ Silicon::Chip::Layout - Layout the gates of a silicon chip L<silicon|https://en.
 
 =head1 Synopsis
 
-=for html <p><img src="https://raw.githubusercontent.com/philiprbrenan/SiliconChipWiring/main/lib/Silicon/Chip/svg/square.svg">
+=for html <p><img src="https://raw.githubusercontent.com/philiprbrenan/SiliconChipLayout/main/lib/Silicon/Chip/input1.svg">
 
 =head1 Description
 
+Layout the gates of a silicon chip L<silicon|https://en.wikipedia.org/wiki/Silicon> L<chip|https://en.wikipedia.org/wiki/Integrated_circuit> to combine L<logic gates|https://en.wikipedia.org/wiki/Logic_gate> to transform software into hardware.
+
+
+Version 20240308.
+
+
+The following sections describe the methods in each functional area of this
+module.  For an alphabetic listing of all methods by name see L<Index|/Index>.
+
+
+
+=head1 Construct
+
+Create a Silicon chip wiring diagram on one or more levels as necessary to make the connections requested.
+
+=head2 new (%options)
+
+New gates layout diagram.
+
+     Parameter  Description
+  1  %options   Options
+
+B<Example:>
+
+
+  
+   {my $d = new;                                                                      # 𝗘𝘅𝗮𝗺𝗽𝗹𝗲
+
+  
+
+=head2 gate($D, %options)
+
+New gate on a gates diagram.
+
+     Parameter  Description
+  1  $D         Diagram
+  2  %options   Options
+
+B<Example:>
+
+
+   {my $d = new;                                                                    
+  
+
+=head1 Visualize
+
+Visualize the layout of the gates
+
+=head2 svg ($D, %options)
+
+Draw the gates
+
+     Parameter  Description
+  1  $D         Diagram
+  2  %options   Options
+
+B<Example:>
+
+
+   {my $d = new;                                                                    
+  
+
+
+=head1 Hash Definitions
+
+
+
+
+=head2 Silicon::Chip::Layout Definition
+
+
+Gate
+
+
+
+
+=head3 Output fields
+
+
+=head4 gates
+
+Gates on diagram
+
+=head4 h
+
+Height of gate
+
+=head4 l
+
+Type of gate
+
+=head4 t
+
+Type of gate
+
+=head4 w
+
+Width of gate
+
+=head4 x
+
+X upper left corner of gate
+
+=head4 y
+
+Y upper left corner of gate
+
+
+
+=head1 Index
+
+
+1 L<gate|/gate> - New gate on a gates diagram.
+
+2 L<new|/new> - New gates layout diagram.
+
+3 L<svg|/svg> - Draw the gates
+
+=head1 Installation
+
+This module is written in 100% Pure Perl and, thus, it is easy to read,
+comprehend, use, modify and install via B<cpan>:
+
+  sudo cpan install Silicon::Chip::Layout
+
+=head1 Author
+
+L<philiprbrenan@gmail.com|mailto:philiprbrenan@gmail.com>
+
+L<http://prb.appaapps.com|http://prb.appaapps.com>
+
+=head1 Copyright
+
+Copyright (c) 2016-2023 Philip R Brenan.
+
+This module is free software. It may be used, redistributed and/or modified
+under the same terms as Perl itself.
+
 =cut
+
+
 
 goto finish if caller;
 clearFolder(q(svg), 99);                                                        # Clear the output svg folder
