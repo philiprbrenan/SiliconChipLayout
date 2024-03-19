@@ -34,9 +34,7 @@ New gates layout diagram.
 
 **Example:**
 
-     {my $d = new;                                                                      # 𝗘𝘅𝗮𝗺𝗽𝗹𝗲
-
-    
+    {my $d = new;                                                                      # 𝗘𝘅𝗮𝗺𝗽𝗹𝗲
 
 ## gate($D, %options)
 
@@ -48,8 +46,7 @@ New gate on a gates diagram.
 
 **Example:**
 
-     {my $d = new;                                                                    
-    
+    {my $d = new;
 
 # Visualize
 
@@ -65,8 +62,7 @@ Draw the gates
 
 **Example:**
 
-     {my $d = new;                                                                    
-    
+    {my $d = new;
 
 # Hash Definitions
 
