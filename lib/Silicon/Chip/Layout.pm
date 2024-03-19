@@ -70,6 +70,7 @@ sub svg($%)                                                                     
   my $color     =                                                               # Colors of gates
    {q(and)      => "darkRed",
     q(continue) => "chocolate",
+    q(fanOut)   => "steelblue",
     q(gt)       => "orangered",
     q(input)    => "green",
     q(lt)       => "teal",
@@ -135,6 +136,16 @@ sub svg($%)                                                                     
     elsif ($t =~ m(\An?lt\Z))
      {$svg->path(d=>"M $x $y L $xx $yy L $x $Y L $X $Y L$X $y Z ", stroke_width=>1/20, stroke=>$c, fill_opacity=>0.1, fill=>$c);
       Not();
+     }
+    elsif ($t =~ m(\AfanOut\Z))                                                 # Fan
+     {my @arc = split /L/, $arc;
+      for my $i(keys @arc)
+       {next if $i % 8;
+        $arc[$i] = " $x $yy ";                                                  # Neutralize some of the arc
+       }
+      shift @arc; pop @arc;
+      my $fan = join "L", @arc;
+      $svg->path(d=>"M $x $yy $fan", stroke_width=>1/20, stroke=>$c, fill_opacity=>0.1, fill=>$c);
      }
     elsif ($t eq "one" or $t eq "zero")
      {$svg->text(x=>$x+1,   y=>$y+1/2, fill=>$c, fill_opacity=>1, font_size=>1, cdata=>($t eq "one" ? "1" : "0"));
@@ -211,10 +222,10 @@ New gates layout diagram.
 B<Example:>
 
 
-  
+
    {my $d = new;                                                                      # 𝗘𝘅𝗮𝗺𝗽𝗹𝗲
 
-  
+
 
 =head2 gate($D, %options)
 
@@ -227,8 +238,8 @@ New gate on a gates diagram.
 B<Example:>
 
 
-   {my $d = new;                                                                    
-  
+   {my $d = new;
+
 
 =head1 Visualize
 
@@ -245,8 +256,8 @@ Draw the gates
 B<Example:>
 
 
-   {my $d = new;                                                                    
-  
+   {my $d = new;
+
 
 
 =head1 Hash Definitions
@@ -359,6 +370,7 @@ if (1)
      $d->gate(x=>13, y=>2, w=>2, h=>1, t=>"not",      l=>"not");
      $d->gate(x=>13, y=>3, w=>2, h=>1, t=>"one",      l=>"one");
      $d->gate(x=>13, y=>4, w=>2, h=>1, t=>"zero",     l=>"zero");
+     $d->gate(x=>1,  y=>3, w=>2, h=>2, t=>"fanOut",   l=>"fan out");
      $d->svg(file=>"input1", height=>6);
  }
 
