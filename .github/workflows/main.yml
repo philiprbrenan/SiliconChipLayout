@@ -1,4 +1,4 @@
-# Test 2024-03-30 at 02:24:37
+# Test 2024-03-31 at 18:18:43
 
 name: Test
 
@@ -36,3 +36,8 @@ jobs:
     - name: Test Silicon Layout
       run:
         perl -Idtt/lib -Isvg/lib  -Imicl/lib  lib/Silicon/Chip/Layout.pm
+
+    - uses: actions/upload-artifact@v4
+      with:
+        name: Layouts
+        path: lib/Silicon/Chip
