@@ -5,7 +5,7 @@
 #-------------------------------------------------------------------------------
 use v5.34;
 package Silicon::Chip::Layout;
-our $VERSION = 20240308;
+our $VERSION = 20240331;
 use warnings FATAL => qw(all);
 use strict;
 use Carp;
