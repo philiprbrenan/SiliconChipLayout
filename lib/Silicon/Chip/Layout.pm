@@ -158,7 +158,7 @@ sub svg($%)                                                                     
 
   my $t = $svg->print(width=>$D->width, height=>$D->height);                    # Text of svg
 
-  if (my $f = $options{file})                                                   # Optionally write to an svg file
+  if (my $f = $options{svg})                                                    # Optionally write to an svg file
    {writeFile(fpe(q(svg), $f, q(svg)), $t)
    }
 
@@ -373,7 +373,7 @@ if (1)
      $d->gate(x=>13, y=>3, w=>2, h=>1, t=>"one",      l=>"one");
      $d->gate(x=>13, y=>4, w=>2, h=>1, t=>"zero",     l=>"zero");
      $d->gate(x=>1,  y=>3, w=>2, h=>2, t=>"fanOut",   l=>"fan out");
-     $d->svg(file=>"input1", width=>14, height=>6);
+     $d->svg(svg=>q(input1), width=>14, height=>6);
  }
 
 #latest:;
