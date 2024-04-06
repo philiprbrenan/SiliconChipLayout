@@ -1,4 +1,4 @@
-# Test 2024-04-05 at 05:53:56
+# Test 2024-04-06 at 06:58:06
 
 name: Test
 
@@ -22,6 +22,11 @@ jobs:
 
     - uses: actions/checkout@v3
       with:
+        repository: philiprbrenan/GithubCrud
+        path: gh
+
+    - uses: actions/checkout@v3
+      with:
         repository: philiprbrenan/SvgSimple
         path: svg
 
@@ -31,11 +36,18 @@ jobs:
         path: micl
 
     - name: Cpan
-      run:  sudo cpan install -T Data::Dump
+      run:  sudo cpan install -T Data::Dump Digest::SHA1
 
     - name: Test Silicon Layout
       run:
         perl -Idtt/lib -Isvg/lib  -Imicl/lib  lib/Silicon/Chip/Layout.pm
+
+    - name: Upload images
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        tree
+        perl -Idtt/lib -Igh/lib -MGitHub::Crud -e"&GitHub::Crud::writeFolderUsingSavedToken(@ARGV)" -- philiprbrenan SiliconChipWiring lib/Silicon/Chip/svg/ svg/
 
     - uses: actions/upload-artifact@v4
       with:
