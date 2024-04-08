@@ -1,4 +1,4 @@
-# Test 2024-04-08 at 23:02:51
+# Test 2024-04-08 at 23:08:21
 
 name: Test
 
@@ -35,6 +35,10 @@ jobs:
       with:
         repository: philiprbrenan/MathIntersectionCircleLine
         path: micl
+
+    - name: Install Cairo svg
+      run:
+        sudo apt install cairosvg
 
     - name: Cpan
       run:  sudo cpan install -T Data::Dump Digest::SHA1
