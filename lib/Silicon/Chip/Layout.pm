@@ -181,7 +181,7 @@ use vars qw(@ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
 @EXPORT_OK    = qw();
 %EXPORT_TAGS = (all=>[@EXPORT, @EXPORT_OK]);
 
-#Images https://raw.githubusercontent.com/philiprbrenan/SiliconChipLayout/main/lib/Silicon/Chip/svg/
+#svg https://raw.githubusercontent.com/philiprbrenan/SiliconChipLayout/main/lib/Silicon/Chip/svg/
 
 =pod
 
