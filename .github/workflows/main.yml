@@ -1,4 +1,4 @@
-# Test 2024-04-08 at 23:00:49
+# Test 2024-04-08 at 23:02:51
 
 name: Test
 
@@ -48,7 +48,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         tree
-        perl -Idtt/lib -Igh/lib -MGitHub::Crud -e"&GitHub::Crud::writeFolderUsingSavedToken(@ARGV)" -- philiprbrenan SiliconChipLayout lib/Silicon/Chip/svg/ svg/
+        perl -Idtt/lib -Igh/lib -M"Data::Table::Text" -e"Data::Table::Text::postProcessImagesForDocumentation"
 
     - uses: actions/upload-artifact@v4
       with:
