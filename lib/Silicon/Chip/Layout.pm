@@ -183,7 +183,7 @@ use vars qw(@ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
 @EXPORT_OK    = qw();
 %EXPORT_TAGS = (all=>[@EXPORT, @EXPORT_OK]);
 
-#svg #svg https://vanina-andrea.s3.us-east-2.amazonaws.com/SiliconChipLayout/lib/Silicon/Chip/svg/
+#svg https://vanina-andrea.s3.us-east-2.amazonaws.com/SiliconChipLayout/lib/Silicon/Chip/svg/
 
 =pod
 
@@ -197,7 +197,7 @@ Silicon::Chip::Layout - Layout the gates of a silicon chip L<silicon|https://en.
 
 =head1 Synopsis
 
-=for html <p><img src="https://raw.githubusercontent.com/philiprbrenan/SiliconChipLayout/main/lib/Silicon/Chip/input1.svg">
+=for html <p><img src="https://vanina-andrea.s3.us-east-2.amazonaws.com/SiliconChipLayout/lib/Silicon/Chip/png/input1.png">
 
 =head1 Description
 
