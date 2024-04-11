@@ -156,7 +156,7 @@ sub svg($%)                                                                     
     $svg->text  (x=>$x+$w/2, y=>$y+$h/2, cdata=>$l);
    }
 
-  my $t = $svg->print(width=>$D->width, height=>$D->height);                    # Text of svg
+  my $t = $svg->print(width=>$D->width+1, height=>$D->height+1);                # Text of svg - the width and height chosen to match those of Wiring.
 
   if (my $f = $options{svg})                                                    # Optionally write to an svg file
    {writeFile(fpe(q(svg), $f, q(svg)), $t)
@@ -181,7 +181,7 @@ use vars qw(@ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
 @EXPORT_OK    = qw();
 %EXPORT_TAGS = (all=>[@EXPORT, @EXPORT_OK]);
 
-#svg https://raw.githubusercontent.com/philiprbrenan/SiliconChipLayout/main/lib/Silicon/Chip/svg/
+#svg #svg https://vanina-andrea.s3.us-east-2.amazonaws.com/SiliconChipLayout/lib/Silicon/Chip/png/
 
 =pod
 
