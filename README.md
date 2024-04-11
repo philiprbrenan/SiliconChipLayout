@@ -9,7 +9,7 @@ Silicon::Chip::Layout - Layout the gates of a silicon chip [silicon](https://en.
 # Synopsis
 
 <div>
-    <p><img src="https://raw.githubusercontent.com/philiprbrenan/SiliconChipLayout/main/lib/Silicon/Chip/input1.svg">
+    <p><img src="https://vanina-andrea.s3.us-east-2.amazonaws.com/SiliconChipLayout/lib/Silicon/Chip/png/input1.png">
 </div>
 
 # Description
