@@ -1,4 +1,4 @@
-# Test 2024-04-09 at 02:26:25
+# Test 2024-04-11 at 02:27:49
 
 name: Test
 
@@ -53,6 +53,14 @@ jobs:
       run: |
         tree
         perl -Idtt/lib -Igh/lib -M"Data::Table::Text" -e"Data::Table::Text::postProcessImagesForDocumentation"
+
+    - name: S3 images
+      run: |
+        pip install awscli
+        aws configure set default.region us-east-2
+        aws configure set aws_access_key_id     ${{ secrets.AWS_ACCESS_KEY_ID     }}
+        aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws s3 sync . s3://vanina-andrea/SiliconChipLayout/
 
     - uses: actions/upload-artifact@v4
       with:
