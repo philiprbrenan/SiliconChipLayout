@@ -109,10 +109,10 @@ sub svg($%)                                                                     
     $svg->rect(x=>$x, y=>$y, width=>$w, height=>$h, fill_opacity=>0, stroke_opacity=>0); # Warps the gate with an invisible rectangle to force the svg image out to the right size.  This line can be dropped when Svg::Simple takes paths into account when calculating the size of a drawing
 
     if    ($t eq "input")
-     {$svg->circle(cx=>$x+1, cy=>$y+1/2, r =>1/3,          fill=>$c);
+     {$svg->circle(cx=>$x+$w/2, cy=>$y+$h/2, r => minimum($w, $h)/2,          fill=>$c);
      }
     elsif ($t eq "output")
-     {$svg->rect(x=>$x+1/2,   y=>$y, width=>1, height =>1, fill=>$c);
+     {$svg->rect(x=>$x,   y=>$y, width=>$w, height =>$h, fill=>$c);
      }
     elsif ($t eq "not" or $t eq "continue")
      {$svg->path(d=>"M $x $y L $X $yy L $x $Y Z", stroke_width=>1/20, stroke=>$c, fill_opacity=>0.1, fill=>$c);
